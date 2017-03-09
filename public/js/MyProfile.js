@@ -1,7 +1,7 @@
 ﻿
 $(document).ready(function() {
     initializePage();
-})
+});
 
 /*
  * Function that is called when the document is ready.
@@ -49,7 +49,7 @@ function backToIndex() {
     //var url = window.location.href;
     //var index = url.indexOf("/my-profile/");
     //var idStr = url.substring(index + 12);
-    window.location.href = "/";
+    window.location.href = "/home";
 }
 
 function editProfile() {

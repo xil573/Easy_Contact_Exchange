@@ -10,7 +10,7 @@
         if(pass.length == 0){
             alert("Please enter your password!")
         }else{
-           window.location.href = "/";
+           window.location.href = "/home";
         }
     }
     //$.get('/loginProcess/' + name + '/' + pass, loginResult);

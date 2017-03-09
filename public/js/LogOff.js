@@ -1,3 +1,3 @@
 ﻿function backToIndex() {
-    window.location.href = "login";
+    window.location.href = "/";
 }

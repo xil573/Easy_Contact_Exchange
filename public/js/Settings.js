@@ -1,5 +1,5 @@
 ﻿function backToIndex() {
-    window.location.href = "/";
+    window.location.href = "/home";
 }
 
 function checkFunc(){

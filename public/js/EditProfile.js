@@ -45,5 +45,5 @@ function backToIndex() {
     var idStr = url.substring(index + 14);
     //console.log(idStr);
     //window.location.href = "../my-profile/" + idStr;
-    window.location.href = "/";
+    window.location.href = "my-profile";
 }

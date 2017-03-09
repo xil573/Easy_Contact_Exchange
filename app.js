@@ -53,15 +53,15 @@ if ('development' == app.get('env')) {
 }
 
 // Add routes here
-app.get('/', index.view);
-//app.get('/versionB', index.verb);
+app.get('/', login.view);
+app.get('/home', index.view);
 
 app.get('/my-profile', my_profile.view);
 app.get('/settings', settings.view);
 app.get('/groups', groups.view);
 app.get('/groupsInfo/:id', ginfo.gInfo);
 app.get('/logoff', logoff.view);
-app.get('/login', login.view);
+//app.get('/login', login.view);
 app.get('/contact/:id', contact.view);
 
 app.get('/add_new_account', add_new_account.view);

@@ -22,5 +22,5 @@
 }
 
 function gotoLogin(){
-    window.location.href = "login";
+    window.location.href = "/";
 }

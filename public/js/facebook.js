@@ -30,7 +30,7 @@ function changeUser(response){
   //console.log(img);
   //$("#name").text(response.name);
   //$("#photo").attr('src', response.picture.data.url);
-  window.location.href = "/";
+  window.location.href = "/home";
 }
 
 function toggleSidebar() {

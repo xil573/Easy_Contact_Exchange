@@ -1,3 +1,3 @@
 function backToHomePage(){
-	window.location.href = "/";
+	window.location.href = "/home";
 }
