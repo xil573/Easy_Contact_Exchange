@@ -1,0 +1,61 @@
+{
+	"group": [
+		{
+			"id": "1",
+			"gname": "Hiking",
+			"member1": {
+				"mname": "John Douglas",
+				"phone": "123-456-7890",
+				"email": "jd@gmail.com"
+			},
+			"member2": {
+				"mname": "Ivan Sutherland",
+				"phone": "222-333-4444",
+				"email": "ivanSuth@gmail.com"
+			},
+			"member3": {
+				"mname": "Lucy Suchman",
+				"phone": "858-257-8888",
+				"email": "lucyyyyyyy@gmail.com"
+			}
+		},
+		{
+			"id": "2",
+			"gname": "CSE170",
+			"member1": {
+				"mname": "Troy E. Young",
+				"phone": "123-343-9873",
+				"email": "ty@ucsd.edu"
+			},
+			"member2":{
+				"mname": "Allen Newell",
+				"phone": "123-889-2472",
+				"email": "allenNw@ucsd.edu"
+			},
+			"member3":{
+				"mname": "Harry Zhang",
+				"phone": "123-000-2472",
+				"email": "harryz@ucsd.edu"
+			}
+		},
+		{
+			"id": "3",
+			"gname": "Family",
+			"member1": {
+				"mname": "Vannevar Bush",
+				"phone": "872-888-9022",
+				"email": "vannnBush@gmail.com"
+			},
+			"member2":{
+				"mname": "Grace Hopper",
+				"phone": "782-343-9873",
+				"email": "grace@ucsd.edu"
+			},
+			"member3":{
+				"mname": "Harry Zhang",
+				"phone": "123-000-2472",
+				"email": "harryz@ucsd.edu"
+			}
+		}
+	]
+}

@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <title>My profile</title>
+	<link rel="stylesheet" href="/css/my_profile.css" />
+  <link rel="stylesheet" href="/css/settings.css" />
+	<script
+  		src="https://code.jquery.com/jquery-3.1.1.min.js"
+  		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  		crossorigin="anonymous"></script>
+    <script src="/js/MyProfile.js"></script>
+</head>
+<body>
+	<nav id="nav_bar">
+		<ul id="nav_bar_content">
+			<li id="nav_bar_left">
+				<button id="back_button" class="click_button" onclick="backToIndex()">
+					<strong>Home</strong>
+				</button>
+			</li>
+			<li id="nav_bar_middle">
+				<strong>My profile</strong>
+			</li>
+			<li id="nav_bar_right">
+			</li>
+		</ul>
+	</nav>
+
+	<main>
+		<ul id="my-profile">
+            <li><img id = "photo" class="contact_img" src="https://shechive.files.wordpress.com/2012/02/a-kitty-cat-7.jpg"></li>
+            <li>
+                <h3 id="name">{{name}}</h3>
+            </li>
+            <li>
+                <ul id="buttonContainer">
+                    {{#each profile}}
+                    <li id="{{id}}" class="profile">
+                        <div id="big{{id}}" class="infoButton" onclick="infoClick(this)">
+                            <ul class="contacts">
+                                <li class="left"><h2>{{name}}</h2></li>
+                                <li class="right"><h5>{{usage}}</h5></li>   
+                                <li class="right"><h4>{{content}}</h4></li>   
+                                <div class = "divider"></div>                        
+                            </ul>
+                            <ul id="sub{{name}}" class="contacts">
+                               <!--
+                                <li class="rightsmall">
+                                    <button id="{{id}}" class="click_button2" onclick="togglePublic(this)">{{public}}</button>
+                                </li>
+                                
+                                <li class="rightsmall">
+                                    <button id="{{name}}" class="click_button3" onclick="remove(this)">delete</button>
+                                </li>
+                            -->
+                            </ul>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ul>
+            </li>
+			<li>
+				<button id="edit_profile" class="edit_button" onclick="editProfile()">
+					<strong>Add more contact information</strong>
+				</button>
+			</li>
+		</ul>
+	</main>
+	</body>
+</html>

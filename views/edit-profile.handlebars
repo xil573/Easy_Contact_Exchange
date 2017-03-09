@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <title>Edit profile</title>
+	<link rel="stylesheet" href="/css/edit_profile.css" />
+  <link rel="stylesheet" href="/css/settings.css" />
+	<script
+  		src="https://code.jquery.com/jquery-3.1.1.min.js"
+  		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  		crossorigin="anonymous"></script>
+    <script src="/js/EditProfile.js"></script>
+</head>
+<body>
+	<nav id="nav_bar">
+		<ul id="nav_bar_content">
+			<li id="nav_bar_left">
+				<button id="back_button" class="click_button" onclick="backToIndex()">
+					<strong>Back</strong>
+				</button>
+			</li>
+			<li id="nav_bar_middle">
+				<strong>Edit profile</strong>
+			</li>
+			<li id="nav_bar_right">
+			</li>
+		</ul>
+	</nav>
+    <main>
+        <ul id="input_thing">
+            <form id="addFriendForm" role="form" method="get" action="/add">
+                <h2 style = "text-align:center;">Add new contact information</h2>
+                    <div class="form-group">
+                        <label for="name"><h4>Type of information</h4></label>
+                    
+                            <input type="text" class="form-control" id="type" placeholder="Example: Phone" name="type">
+                        
+                        <!--
+                            <select id = "type" name = "type" form = "type-form">
+                                <option value="volvo">Volvo</option>
+                                <option value="saab">Saab</option>
+                                <option value="opel">Opel</option>
+                                <option value="audi">Audi</option>
+                            </select>  
+                        -->
+                    </div>
+                    <div class="form-group">
+                        <label for="usage"><h4>Usage</h4></label>
+                            <input type="text" class="form-control" id="usage" placeholder="Example: Home" name="usage">
+                    </div>
+                    <div class="form-group">
+                        <label for="content"><h4>Content</h4></label>
+                            <input type="text" class="form-control" id="content" placeholder="Example: 123-456-789" name="content">
+                    </div>
+                    <br>
+                <input type="submit" id="submitBtn" class="btn btn-default" value="Add"></input>
+            </form>
+        </ul>
+    </main>
+	</body>
+</html>

@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <title>Search results</title>
+	<link rel="stylesheet" href="/css/search_result.css" />
+	<script
+  		src="https://code.jquery.com/jquery-3.1.1.min.js"
+  		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  		crossorigin="anonymous"></script>
+
+	<script src="/js/bootstrap.min.js"></script>
+    <script src="/js/SearchResult.js"></script>
+  	
+</head>
+<body>
+	<nav id="nav_bar">
+		<ul id="nav_bar_content">
+			<li id="nav_bar_left">
+				<button id="back_button" class="click_button" onclick="backToAddNewContactPage()">
+					<strong>Back</strong>
+				</button>
+			</li>
+			<li id="nav_bar_middle">
+				<strong>Search result</strong>
+			</li>
+			<li id="nav_bar_right">
+				<button id="next_button" class="click_button" onclick="selectInfoToSend()">
+					<strong>Next</strong>
+				</button>
+			</li>
+		</ul>
+	</nav>
+	<main>
+		<h3>Please select the people you want to send your information to:</h3>
+		<ul id="result_list">
+			<li class="search_item">
+                	<div class="container">
+						<div class="control-group">
+							<label class="control control--checkbox">
+								<h5 id="demo"></h5>
+	  							<input id = "user" type="checkbox" name="user" value="">
+	  							<div class="control__indicator"></div>
+    						</label>
+    					</div>
+    				</div>
+			{{#each user}}
+                    <!--<button id="{{id}}" onclick="requestAddToContact(this)"> -->
+                        <script>
+                        	var addr = window.location.href;
+							var index_first = addr.search("name=");
+							var index_last = addr.search("%20");
+							var first_name = addr.substring(index_first+ 5, index_last);
+							var last_name = addr.substring(index_last+3);
+							var person_found = first_name + " " + last_name;
+							//document.getElementById("demo").innerHTML = "Name: " + person_found;
+							//if(person_found.toUpperCase() == {{name}}.toUpperCase()){}
+                        	if(person_found.indexOf("{{name}}") >= 0){
+                        		//document.getElementById("demo").innerHTML = '<strong>{{name}}</strong>                       <input type="checkbox" name="add" value="add_ckb"> <br>';
+                        		document.getElementById("demo").innerHTML = '<img class="contact_img" hspace="10" src="{{imageURL}}">{{name}}'
+                        	}
+                        </script>
+                        <!--
+                        <img class="contact_img" src="{{imageURL}}">
+                        <strong>{{name}}</strong>                       
+                        <input type="checkbox" name="add" value="add_ckb"> <br> 
+                        -->                      
+                    <!--</button> -->
+                </li>
+            {{/each}}
+		</ul>
+	</main>
+	</body>
+</html>

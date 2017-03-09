@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <title>Search results</title>
+	<link rel="stylesheet" href="/css/search_result.css" />
+	<script
+  		src="https://code.jquery.com/jquery-3.1.1.min.js"
+  		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  		crossorigin="anonymous"></script>
+
+	<script src="/js/bootstrap.min.js"></script>
+    <script src="/js/SearchResultAll.js"></script>
+  	
+</head>
+<body>
+	<nav id="nav_bar">
+		<ul id="nav_bar_content">
+			<li id="nav_bar_left">
+				<button id="back_button" class="click_button" onclick="backToAddNewContactPage()">
+					<strong>Back</strong>
+				</button>
+			</li>
+			<li id="nav_bar_middle">
+				<strong>Search result</strong>
+			</li>
+			<li id="nav_bar_right">
+				<button id="next_button" class="click_button" onclick="selectInfoToSend()">
+					<strong>Next</strong>
+				</button>
+			</li>
+		</ul>
+	</nav>
+	<main>
+		<p id="demo"></p>
+		<h3>Please select the people you want to send your information to:</h3>
+		<script>
+			var addr = window.location.href;
+			var index_first = addr.search("name=");
+			var res_name = addr.substring(index_first+ 5);
+			document.getElementById("demo").innerHTML = '<strong><h4>There is no result for</h4></strong>' + res_name;
+		</script>
+		<ul id="result_list">
+			<div class="container">
+				<div class="control-group">
+					{{#each user}}
+					<label class="control control--checkbox">
+						<h5><img class="contact_img" hspace="10" src="{{imageURL}}">{{name}}</h5>
+	  					<input id = "user" type="checkbox" name="user" value="">
+	  					<div class="control__indicator"></div>
+    				</label>
+    				{{/each}}
+<!--				
+                <li class="search_item">
+                        <img class="contact_img" src="{{imageURL}}">
+                        <h4>{{name}}</h4>                       
+                        <input type="checkbox" name="add" value="add_ckb"> <br>      
+                </li>
+            -->
+        		</div>
+        	</div>
+            
+		</ul>
+	</main>
+
+	</body>
+</html>

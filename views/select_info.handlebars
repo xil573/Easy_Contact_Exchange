@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <title>Select contact info</title>
+	<link rel="stylesheet" href="/css/search_result.css" />
+	<link rel="stylesheet" href="/css/settings.css" />
+	<script
+  		src="https://code.jquery.com/jquery-3.1.1.min.js"
+  		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  		crossorigin="anonymous"></script>
+   	<script src="/js/Settings.js"></script>
+  	<script src="/js/select-info.js"></script>
+</head>
+<body>
+	<nav id="nav_bar">
+		<ul id="nav_bar_content">
+			<li id="nav_bar_left">
+				<button id="back_button" class="click_button" onclick="backToAddNewContactPage()">
+					<strong>Back</strong>
+				</button>
+			</li>
+			<li id="nav_bar_middle">
+				<strong>Select Information</strong>
+			</li>
+			<li id="nav_bar_right">
+				<button id="next_button" class="click_button" onclick="confirmPage()">
+					<strong>Next</strong>
+				</button>
+			</li>
+		</ul>
+	</nav>
+
+	<main>
+		<div class="container">
+			<div class="control-group">
+				<h2>Please select the information you want to send out:</h3>
+		
+					<form>
+						<label class="control control--checkbox"><h4>Phone Number</h4>
+	  						<input id = "phone" type="checkbox" name="way" value="phone">
+	  						<div class="control__indicator"></div>
+    					</label>
+    					<label class="control control--checkbox"><h4>Email Address</h4>
+  							<input id = "email" type="checkbox" name="way" value="email">
+  							<div class="control__indicator"></div>
+    					</label>
+    					<label class="control control--checkbox"><h4>Facebook</h4>
+	  						<input id = "facebook" type="checkbox" name="way" value="facebook">
+	  						<div class="control__indicator"></div>
+    					</label>
+    					<label class="control control--checkbox"><h4>LinkedIn</h4>
+	  						<input id = "linkedin" type="checkbox" name="way" value="linkedin">
+	  						<div class="control__indicator"></div>
+    					</label>
+    					<label class="control control--checkbox"><h4>WeChat</h4>
+	  						<input id = "wechat" type="checkbox" name="way" value="wechat">
+	  						<div class="control__indicator"></div>
+    					</label>
+    					<label class="control control--checkbox"><h4>Instagram</h4>
+	  						<input id = "instagram" type="checkbox" name="way" value="instagram">
+	  						<div class="control__indicator"></div>
+    					</label>
+  				<!--<button class="click_button" onclick="checkFunc()">OK</button> -->
+					</form>
+				</div>
+		</div>
+	</main>
+</body>
+</html>
