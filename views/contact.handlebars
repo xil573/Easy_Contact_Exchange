@@ -107,10 +107,18 @@ li {
 					margin-top: 51px;
 					padding: 15px;
 			}
+			.contact_img{
+				display: block;
+    			margin: auto;
+				max-width: 80px;
+			}
 		</style>
 		<ul class="contact_info">
+			<img class="contact_img" hspace="10" src="{{image}}">
 			<ul>
-				<h2>{{contactName}}</h2>
+				<h2><strong>Name:</strong> {{name}}</h2>
+				<h2><strong>Phone:</strong> {{phone}}</h2>
+				<h2><strong>Email:</strong> {{email}}</h2>
 			</ul>
 		</ul>
 		<style type="text/css">
@@ -120,6 +128,9 @@ li {
   				margin-top: 30px;
 				}
 		</style>
+		<button id="back_button" class="click_button" onclick="">
+					<strong>Delete</strong>
+		</button>
 	</main>
 	</body>
 </html>
