@@ -43,26 +43,30 @@
 					<img id = "photo" class="contact_img" src="/images/ex_icon.png"/>
 				</button>
 			</li>
-			<li id="name">
-				{{#each users}}
+			
+			{{#each users}}
 				<h2 id = "name">{{username}}</h2>
-				{{/each}}
-			</li>
+			{{/each}}
+			
 			<li id="another_folder" class="side_bar_folder">
-					<button id="view_profile" class="side_bar_button" onclick="changePageToMyProfile()">
-						View my profile
-					</button>
-		
+				<button id="view_profile" class="side_bar_button" onclick="changePageToMyProfile()">
+					View my profile
+				</button>
 				<br>
 				<button id="groups" class="side_bar_button" onclick="changePageToGroups()">
 					Groups
 				</button>
 			</li>
 			<li id="settings_folder" class="side_bar_folder">
+				<button id="invite_friends" class="side_bar_button" onclick="">
+					Invite friends
+				</button>
+				<br> 
 				<button id="setting" class="side_bar_button" onclick="changePageToSettings()">
 					Settings
 				</button>
-				<br> 
+			</li>
+			<li id="settings_folder" class="side_bar_folder">
 				<button id="log_off" class="side_bar_button" onclick="logOff()">
 					Log out
 				</button>

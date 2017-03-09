@@ -58,7 +58,9 @@ li {
 	transition: all 0.2s;
 	-webkit-user-select: none;
 }
-
+#invite_button{
+	margin-left: 100px;
+}
 .click_button:active{
 	background-color: rgba(150, 150, 150, 0.3);
 }

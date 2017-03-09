@@ -29,16 +29,47 @@
 		</ul>
 	</nav>
 	<main>
+		<ul id="input_thing">
+            <form id="create_new_user" role="form" method="get" action="/new-user">
+                    <div class="form-group">
+                        <label for="uname"><h4>Username:</h4></label>
+                            <input type="text" class="form-control" id="user_name" placeholder="" name="user_name">
+                    </div>
+                    <div class="form-group">
+                        <label for="psw"><h4>Password:</h4></label>
+                            <input type="password" class="form-control" id="password" placeholder="" name="password">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm"><h4>Retype your password:</h4></label>
+                            <input type="password" class="form-control" id="con_psw" placeholder="" name="con_psw">
+                    </div>
+                    <br>
+                    <li>
+						<button id="create_new_button" class="button" onclick="gotoMainPage()">
+							<strong>Create</strong>
+						</button>
+					</li>
+					<!--
+                <input type="submit" id="submitBtn" class="btn btn-default" value="Add"></input>
+            -->
+            </form>
+        </ul>
+
+<!--
+
 		<ul id="search_package">
 			<form id="create_new_user" role="form" method="get" action="/new-user">
 				<li>
-					<input id="user_name" type="text" name="user_name" placeholder="User name">
+					<h3>Username:</h3>
+					<input id="user_name" type="text" name="user_name" placeholder="">
 				</li>
 				<li>
-					<input id="user_pass" type="password" name="user_pass" placeholder="Password">
+					<h3>Password:</h3>
+					<input id="user_pass" type="password" name="user_pass" placeholder="">
 				</li>
 				<li>
-					<input id="user_conf_pass" type="password" name="user_conf_pass" placeholder="Confirm your password">
+					<h3>Retype password:</h3>
+					<input id="user_conf_pass" type="password" name="user_conf_pass" placeholder="">
 				</li>
 				<li>
 					<button id="create_new_button" class="button" onclick="gotoMainPage()">
@@ -47,6 +78,7 @@
 				</li>
 			</form>
 		</ul>
+	-->
 	</main>
 </body>
 </html>

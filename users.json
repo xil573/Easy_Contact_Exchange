@@ -128,7 +128,7 @@
 		},
 		{
 			"id": "19",
-			"name": "Leo DiCaprio",
+			"name": "Leonardo DiCaprio",
 			"phone": "888-416-7890",
 			"email": "leo@gmail.com",
 			"imageURL": "http://i0.kym-cdn.com/entries/icons/original/000/019/712/48029_ori.jpg"			
@@ -167,6 +167,27 @@
 			"phone": "890-889-2472",
 			"email": "jen@ucsd.edu",
 			"imageURL": "https://upload.wikimedia.org/wikipedia/commons/1/16/JenniferAnistonHWoFFeb2012.jpg"
+		},
+		{
+			"id": "25",
+			"name": "Tom Gedeon",
+			"phone": "000-257-8888",
+			"email": "tom___@gmail.com",
+			"imageURL": "http://users.cecs.anu.edu.au/~Tom.Gedeon/images/tgedeon3.png"			
+		},
+		{
+			"id": "26",
+			"name": "Leo Ma",
+			"phone": "000-257-8888",
+			"email": "tom___@gmail.com",
+			"imageURL": "http://www.iconpr.com.au/uploads/styles/feature/uploads/features/preview/Y82bI-Tencent_Logo_icon_3.png"			
+		},
+		{
+			"id": "27",
+			"name": "Xindi Liu",
+			"phone": "000-257-8888",
+			"email": "tom___@gmail.com",
+			"imageURL": "http://www.covertimeline.net/uploads/documents/1378107887Panda-Simple-Design-Cute-Face-HD.jpg"			
 		}
 	]
 }

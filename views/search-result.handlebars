@@ -38,11 +38,13 @@
 			<li class="search_item">
                 	<div class="container">
 						<div class="control-group">
+							{{#each res_names}}
 							<label class="control control--checkbox">
-								<h5><img class="contact_img" hspace="10" src="{{imageURL}}">{{newContact}}</h5>
+								<h5><img class="contact_img" hspace="10" src="{{url}}">{{name}}</h5>
 	  							<input id = "user" type="checkbox" name="user" value="">
 	  							<div class="control__indicator"></div>
     						</label>
+    						{{/each}}
     					</div>
     				</div>
 		</ul>

@@ -179,6 +179,7 @@ main {
 	border-bottom: 1px solid rgba(0,0,0,0.6);
 }
 .side_bar_button{
+	width: 120px;
 	background-color: transparent;
 	border-radius: 5px;
 	border: 1px solid black;
