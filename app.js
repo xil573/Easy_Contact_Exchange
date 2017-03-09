@@ -17,6 +17,7 @@ var logoff = require('./routes/logOff');
 var login = require('./routes/login');
 var contact = require('./routes/contact');
 var add_new_account = require('./routes/addNewAccount');
+var search_contact = require('./routes/addNewAccount');
 var search_result = require('./routes/searchResult');
 var search_result_all = require('./routes/searchResultAll');
 var select_info = require('./routes/selectInfo');
@@ -64,7 +65,7 @@ app.get('/login', login.view);
 app.get('/contact/:id', contact.view);
 
 app.get('/add_new_account', add_new_account.view);
-app.get('/search-contact', add_new_account.searchContact);
+app.get('/search-contact', search_contact.searchContact);
 
 app.get('/search_result', search_result.view);
 app.get('/search_result_all', search_result_all.view);
