@@ -28,11 +28,11 @@ exports.searchContact = function (req, res) {
     		'imageURL': data.user[index].imageURL
     	});
 	}else{
-		res.render('search-result-all', data);
-		//res.render('search-result-all', {
-		//	data,
-		//	'searchContact': uname
-		//});
+		//res.render('search-result-all', data);
+		res.render('search-result-all', {
+			//data,
+			'searchContact': uname
+		});
 	}
-	//res.render('search-result-all', data);
+	
 };
