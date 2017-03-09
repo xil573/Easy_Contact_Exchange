@@ -1,6 +1,7 @@
 var fs = require('fs');
-var data = require("../people.json");
-var data2 = require("../users.json");
+var data = require("../people.json"); //for contact list and profile name
+var data2 = require("../users.json"); //for search
+var user_pw = require("../user_pw.json");  //for name - pw storing
 
 exports.view = function (req, res) {
     res.render('create-new-account');
@@ -23,8 +24,11 @@ exports.createNewUser = function (req, res) {
 	}
 	//console.log(newUser);
 	data2.user.push(newUser2);
-	data.users.push(newUser);
+	user_pw.users.push(newUser);
+	//data.users.push(newUser);
+	data.users[0] = uname;
 
+	//write into search file
 	var json2 = JSON.stringify(data2);
 	fs.writeFile("users.json", json2, 'utf8', function errorCallback(err) {
         //console.log("write");
@@ -35,6 +39,20 @@ exports.createNewUser = function (req, res) {
             console.log("write into users.json");
         }
     });
+
+	//write into user-pwd file
+	var json3 = JSON.stringify(user_pw);
+	fs.writeFile("user_pw.json", json3, 'utf8', function errorCallback(err) {
+        //console.log("write");
+        if (err) {            
+            console.log("wrong");
+        } else {
+            //res.json(1);
+            console.log("write into user_pw.json");
+        }
+    });
+
+	//write into contact and profile name file
 	var json = JSON.stringify(data);
 	fs.writeFile("people.json", json, 'utf8', function errorCallback(err) {
         //console.log("write");
