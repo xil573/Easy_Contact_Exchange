@@ -38,28 +38,17 @@
 	<div id="side_bar_mask" class="mask" hidden="hidden" onclick="toggleSidebar()"></div>
 	<nav id="side_bar">
 		<ul>
-			<!--
 			<li id="album">
 				<button id="album_face_border" onclick = "changePageToMyProfile()">
 					<img id = "photo" class="contact_img" src="https://shechive.files.wordpress.com/2012/02/a-kitty-cat-7.jpg"/>
 				</button>
 			</li>
-		-->
 			<li id="name">
 				{{#each users}}
 				<h2 id = "name">{{username}}</h2>
 				{{/each}}
 			</li>
 			<li id="another_folder" class="side_bar_folder">
-				<button id="album_face_border" onclick = "changePageToMyProfile()">
-					<img id = "photo" class="contact_img" src="https://shechive.files.wordpress.com/2012/02/a-kitty-cat-7.jpg"/>
-				</button>
-				<li id="name">
-					{{#each users}}
-						<h2 id = "name">{{username}}</h2>
-					{{/each}}
-				</li>
-				<li id="another_folder" class="side_bar_folder">
 					<button id="view_profile" class="side_bar_button" onclick="changePageToMyProfile()">
 						View my profile
 					</button>
