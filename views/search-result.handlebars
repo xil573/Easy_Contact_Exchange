@@ -39,36 +39,12 @@
                 	<div class="container">
 						<div class="control-group">
 							<label class="control control--checkbox">
-								<h5 id="demo"></h5>
+								<h5><img class="contact_img" hspace="10" src="{{imageURL}}">{{newContact}}</h5>
 	  							<input id = "user" type="checkbox" name="user" value="">
 	  							<div class="control__indicator"></div>
     						</label>
     					</div>
     				</div>
-			{{#each user}}
-                    <!--<button id="{{id}}" onclick="requestAddToContact(this)"> -->
-                        <script>
-                        	var addr = window.location.href;
-							var index_first = addr.search("name=");
-							var index_last = addr.search("%20");
-							var first_name = addr.substring(index_first+ 5, index_last);
-							var last_name = addr.substring(index_last+3);
-							var person_found = first_name + " " + last_name;
-							//document.getElementById("demo").innerHTML = "Name: " + person_found;
-							//if(person_found.toUpperCase() == {{name}}.toUpperCase()){}
-                        	if(person_found.indexOf("{{name}}") >= 0){
-                        		//document.getElementById("demo").innerHTML = '<strong>{{name}}</strong>                       <input type="checkbox" name="add" value="add_ckb"> <br>';
-                        		document.getElementById("demo").innerHTML = '<img class="contact_img" hspace="10" src="{{imageURL}}">{{name}}'
-                        	}
-                        </script>
-                        <!--
-                        <img class="contact_img" src="{{imageURL}}">
-                        <strong>{{name}}</strong>                       
-                        <input type="checkbox" name="add" value="add_ckb"> <br> 
-                        -->                      
-                    <!--</button> -->
-                </li>
-            {{/each}}
 		</ul>
 	</main>
 	</body>

@@ -34,12 +34,12 @@
 	
 	<main>
 		<ul id="search_package">
+			<form id="add_new_contact" role="form" method="get" action="/search-contact">
 			<li>
-				<p>For testing, try users in user.json, such as Xindi Li, Harry Liu, etc. </p>
-				<input id="search_str" type="text" name="" placeholder="Enter username" value="">
+				<input id="search_str" type="text" name="search_str" placeholder="Enter username" value="">
 			</li>
 			<li>
-				<button class="search_button" onclick="searchResult()">
+				<button class="search_button" onclick="">
 					<strong>Search</strong>
 				</button>
 				<p id="demo"></p>

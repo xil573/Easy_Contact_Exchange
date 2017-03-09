@@ -62,7 +62,10 @@ app.get('/groupsInfo/:id', ginfo.gInfo);
 app.get('/logoff', logoff.view);
 app.get('/login', login.view);
 app.get('/contact/:id', contact.view);
+
 app.get('/add_new_account', add_new_account.view);
+app.get('/search-contact', add_new_account.searchContact);
+
 app.get('/search_result', search_result.view);
 app.get('/search_result_all', search_result_all.view);
 app.get('/select_info', select_info.view);
