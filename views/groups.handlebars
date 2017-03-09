@@ -6,6 +6,7 @@
     <title>Groups</title>
 	<link rel="stylesheet" href="/css/groups.css" />
 	<link rel="stylesheet" href="/css/settings.css" />
+	<link rel="stylesheet" href="css/HomePage.css" />
 	<script
   		src="https://code.jquery.com/jquery-3.1.1.min.js"
   		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -28,6 +29,18 @@
 		</ul>
 	</nav>
 	<main>
+		<ul id="contact_list">
+			{{#each group}}
+			<div class="group" id="{{id}}">
+				<li class="contact_item">
+					<button id="{{id}}" onclick="location.href='#'">
+                        <h2>{{gname}}</h2>
+                    </button>
+				</li>
+			</div>
+			{{/each}}
+		</ul>
+<!--
 			{{#each group}}
 			<div class="group" id="{{id}}">
 				<div class = thumbnail>
@@ -35,16 +48,19 @@
 						<h2>{{gname}}</h2>
 					</a>
 					
-                	<!--
+                
                 	<div class="details"></div>
                     <button id="{{id}}" onclick="changePageToContact(this)">
                         <img class="contact_img" src="{{imageURL}}">
                         <strong>{{name}}</strong>
                     </button>
-                	-->
+                	
                 </div>
             </div>
             {{/each}}
+
+            -->
+            <br>
             <div class="details"></div>
             <input type="button" value="Add Group">
             <input type="button" value="Delete Group">

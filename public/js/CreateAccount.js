@@ -1,7 +1,7 @@
 ﻿function gotoMainPage(){
 	var $user_name = document.getElementById('user_name');
-    var $user_pass = document.getElementById('user_pass');
-    var $user_conf_pass = document.getElementById('user_conf_pass');
+    var $user_pass = document.getElementById('password');
+    var $user_conf_pass = document.getElementById('con_psw');
     var name = $user_name.value;
     var pass = $user_pass.value;
     var conf = $user_conf_pass.value;

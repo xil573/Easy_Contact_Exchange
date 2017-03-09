@@ -197,8 +197,9 @@ main {
 	list-style: none;
 	align-items: center;
 }
+
 .contact_item{
-	margin-bottom: 5px;
+	margin-bottom: 1px;
 }
 .contact_item > button{
 	text-align: left;
@@ -223,15 +224,15 @@ main {
 	background-color: rgba(150, 150, 150, 0.3);
 }
 
-.contact_item > button > strong{
+.contact_item > button > h3{
 	margin-left: 10px;
 	text-align: center;
 	font-size: 15px;
 }
 
 .contact_img{
-	max-width: 25px;
-	max-height: 25px;
-	min-height: 25px;
-	min-width: 25px;
+	max-width: 30px;
+	max-height: 30px;
+	min-height: 30px;
+	min-width: 30px;
 }

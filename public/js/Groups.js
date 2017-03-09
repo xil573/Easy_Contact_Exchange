@@ -10,7 +10,7 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	$('.group a').click(addGroupInfo);
+	$('.group button').click(addGroupInfo);
 
 	//$('#colorBtn').click(randomizeColors);
 }
@@ -39,14 +39,15 @@ function callback(result){
 	'<p><small>' + 'Member1: ' + result.member1.mname + '</small></p>' +
 	'<p><small>' + 'Phone: ' + result.member1.phone + '</small></p>' +
 	'<p><small>' + 'Email: ' + result.member1.email + '</small></p>' + 
-	'<br></br>' +
+	'<br>' +
 	'<p><small>' + 'Member2: ' + result.member2.mname + '</small></p>' +
 	'<p><small>' + 'Phone: ' + result.member2.phone + '</small></p>' +
 	'<p><small>' + 'Email: ' + result.member2.email + '</small></p>' +
-	'<br></br>' +
+	'<br>' +
 	'<p><small>' + 'Member3: ' + result.member3.mname + '</small></p>' +
 	'<p><small>' + 'Phone: ' + result.member3.phone + '</small></p>' +
-	'<p><small>' + 'Email: ' + result.member3.email + '</small></p>'
+	'<p><small>' + 'Email: ' + result.member3.email + '</small></p>' + 
+	'<br>'
 	//'<p>' + result.summary + '</p>'
 	$("div.details").html(gHtml);
 	//$("#group" + result.id + " .details").html(gHtml);
