@@ -15,6 +15,7 @@
         	alert("Confirmation password dosen't match!");
         }else{
         	alert("You have succeffully created an Exchange account!");
+            alert("We will automatically synchronize your contact book!");
             //window.location.href = "/";
         }
     }
