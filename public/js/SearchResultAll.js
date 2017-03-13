@@ -36,3 +36,7 @@ function requestAddToContact(elem) {
     //window.location.href = "add-contact.html?id=" + id;
     //window.location.href = "";
 }
+
+function changePageToInvite(){
+    window.location.href = "invite";
+}

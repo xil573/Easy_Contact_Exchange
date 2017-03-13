@@ -26,6 +26,7 @@
       		<img id="app_image" class='image' alt="Avatar" src="images/entry-icon.png" />
     	</div>
 		<ul id="search_package">
+		<form id="create_new_user" role="form" method="get" action="/check-login">
 			<div class="form-group">
 				<input id="user_name" class="form-control" type="text" name="user_name" placeholder="Enter your user name">
 			</div>
@@ -37,6 +38,7 @@
 					<strong>Log in</strong>
 				</button>
 			</li>
+			</form>
 			<li>
 				<button id="create_new_button" class="create_button" onclick="gotoCreatePage()">
 					<strong>Create an account</strong>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <title>Invite friends</title>
+	<link rel="stylesheet" href="/css/invite.css" />
+  <link rel="stylesheet" href="/css/settings.css" />
+	<script
+  		src="https://code.jquery.com/jquery-3.1.1.min.js"
+  		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  		crossorigin="anonymous"></script>
+    <script src="/js/invite.js"></script>
+</head>
+<body>
+	<nav id="nav_bar">
+		<ul id="nav_bar_content">
+			<li id="nav_bar_left">
+				<button id="back_button" class="click_button" onclick="backToIndex()">
+					<strong>Home</strong>
+				</button>
+			</li>
+			<li id="nav_bar_middle">
+				<strong>Invite friends</strong>
+			</li>
+			<li id="nav_bar_right">
+			</li>
+		</ul>
+	</nav>
+    <main>
+        <ul id="input_thing">
+            <form id="addFriendForm" role="form" method="" action="">
+                    <div class="form-group">
+                        <label for="name"><h4>Your friend's name:</h4></label>
+                            <input type="text" class="form-control" id="name" placeholder="" name="name">
+                        
+                        <!--
+                            <select id = "type" name = "type" form = "type-form">
+                                <option value="volvo">Volvo</option>
+                                <option value="saab">Saab</option>
+                                <option value="opel">Opel</option>
+                                <option value="audi">Audi</option>
+                            </select>  
+                        -->
+                    </div>
+                    <div class="form-group">
+                        <label for="email"><h4>Your friend's Email:</h4></label>
+                            <input type="text" class="form-control" id="email" placeholder="" name="email">
+                    </div>
+                    <br>
+                <button id = "submitBtn" class="invitation_btn" onclick = "sendInvitation()">Send Invitation</button>
+                <!--<input type="submit" id="submitBtn" class="btn btn-default" value="Send invitation"></input> -->
+            </form>
+        </ul>
+    </main>
+	</body>
+</html>

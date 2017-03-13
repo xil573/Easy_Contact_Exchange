@@ -58,9 +58,7 @@ li {
 	transition: all 0.2s;
 	-webkit-user-select: none;
 }
-#invite_button{
-	margin-left: 100px;
-}
+
 .click_button:active{
 	background-color: rgba(150, 150, 150, 0.3);
 }
@@ -206,4 +204,15 @@ h2, h3, h4, h5 {
 }
 .control--checkbox input:disabled ~ .control__indicator:after {
   border-color: #7b7b7b;
+}
+.invitation_btn{
+	width: 100%;
+	background-color: transparent;
+	border-radius: 5px;
+	border: 1px solid black;
+	line-height: 24px;
+	padding: 0 10px;
+	outline:none;
+	transition: all 0.2s;
+	-webkit-user-select: none;
 }

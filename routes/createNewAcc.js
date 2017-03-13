@@ -9,7 +9,7 @@ exports.view = function (req, res) {
 
 exports.createNewUser = function (req, res) {
 	var uname = req.query.user_name;
-	var upass = req.query.user_pass;
+	var upass = req.query.password;
 	var newUser = {
 		"username": uname,
 		"password": upass

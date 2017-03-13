@@ -51,7 +51,9 @@ function changePageToContact(elem) {
     //window.location.href = "contact.html?id=" + id;
     //window.location.href = "contact";
 }
-
+function changePageToInvite(){
+    window.location.href = "invite";
+}
 
 //$.getJSON("../../people.json", function (data) {
 //    var i;
