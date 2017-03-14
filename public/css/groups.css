@@ -64,13 +64,16 @@ main {
 	padding: 15px;
 }
 input[type=button], input[type=submit], input[type=reset] {
-    background-color: transparent;
-	border-radius: 5px;
-	border: 1px solid black;
-	line-height: 24px;
-	padding: 0 10px;
-	outline:none;
-	transition: all 0.2s;
-	-webkit-user-select: none;
-	margin-left: 40px;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid black;
+  line-height: 24px;
+  padding: 0 10px;
+  outline:none;
+  transition: all 0.2s;
+  -webkit-user-select: none;
+}
+.divider{
+	margin: 10px;
 }

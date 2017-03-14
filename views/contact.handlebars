@@ -10,87 +10,101 @@
   		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   		crossorigin="anonymous"></script>
   	<script src="/js/contact.js"></script>
+
+  	<style type="text/css">
+	ul {
+		padding: 0;
+		margin: 0;
+	}
+
+	ul.middleList{
+		text-align:center;
+		list-style-type:none;	
+	}
+	li {
+		margin-bottom:10px;
+	}
+	body {
+			padding: 0;
+			margin:0;
+			background-color:white;
+			align-self:center;
+		}
+	#nav_bar{
+			position: fixed;
+			top:0;
+			left:0;
+			background-color: white;
+			border-bottom: 1px solid grey;
+			width: 100%;
+			height: 50px;
+			z-index: 1024;
+		}
+	#nav_bar_content{
+			list-style: none;
+			display: flex;
+			padding: 10px;
+			line-height: 30px;
+		}
+	#nav_bar_left{
+			width: 25%;
+			text-align:left;
+		}
+	.click_button {
+        	background-color: transparent;
+			border-radius: 5px;
+			border: 1px solid black;
+			line-height: 24px;
+			padding: 0 10px;
+			outline:none;
+			transition: all 0.2s;
+			-webkit-user-select: none;
+  		}
+    .click_button:active{
+			background-color: rgba(150, 150, 150, 0.3);
+	}
+	#nav_bar_middle{
+			width: 50%;
+			text-align: center;
+	}
+	main {
+		margin-left: 50px;
+		margin-top: 51px;
+		padding: 15px;
+	}
+	.contact_img{
+		margin-left: 65px;
+		max-width: 80px;
+	}
+	h2, h4 {
+  		font-family: 'Alegreya Sans', sans-serif;
+  		font-weight: 300;
+  		margin-top: 30px;
+	}
+	.click_button{
+		width: 80%;
+  		background-color: transparent;
+  		border-radius: 5px;
+  		border: 1px solid black;
+  		line-height: 24px;
+  		padding: 0 10px;
+  		outline:none;
+  		transition: all 0.2s;
+  		-webkit-user-select: none;
+	}
+</style>
 </head>
 
-<style type="text/css">
-ul {
-	padding: 0;
-	margin: 0;
-}
-
-ul.middleList{
-	text-align:center;
-	list-style-type:none;	
-}
-li {
-	margin-bottom:10px;
-}
-</style>
-
 <body>
-	<style type="text/css">
-		body {
-				padding: 0;
-				margin:0;
-				background-color:white;
-				align-self:center;
-		}
-	</style>
-	<nav id="nav_bar">
-		<style type="text/css">
-			#nav_bar{
-				position: fixed;
-				top:0;
-				left:0;
-				background-color: white;
-				border-bottom: 1px solid grey;
-				width: 100%;
-				height: 50px;
-				z-index: 1024;
-			}
-		</style>
+	<nav id="nav_bar">	
 		<ul id="nav_bar_content">
-			<style type="text/css">
-				#nav_bar_content{
-					list-style: none;
-					display: flex;
-					padding: 10px;
-					line-height: 30px;
-				}
-			</style>
 			<li id="nav_bar_left">
-				<style type="text/css">
-					#nav_bar_left{
-						width: 25%;
-						text-align:left;
-					}
-				</style>
 				<button id="back_button" class="click_button" onclick="backToIndex()">
 					<strong>Back</strong>
-				</button>
-				<style type="text/css">
-    				.click_button {
-        				background-color: transparent;
-						border-radius: 5px;
-						border: 1px solid black;
-						line-height: 24px;
-						padding: 0 10px;
-						outline:none;
-						transition: all 0.2s;
-						-webkit-user-select: none;
-    				}
-    				.click_button:active{
-						background-color: rgba(150, 150, 150, 0.3);
-					}
-				</style>
+				</button>		
 			</li>
 			<li id="nav_bar_middle">
-				<style type="text/css">
-					#nav_bar_middle{
-						width: 50%;
-						text-align: center;
-					}
-				</style>
+				
 				<strong id="profile_name">
 					Contacts
 				</strong>
@@ -101,18 +115,6 @@ li {
 	</nav>
 
 	<main>
-		<style type="text/css">
-			main {
-					margin-left: 60px;
-					margin-top: 51px;
-					padding: 15px;
-			}
-			.contact_img{
-				display: block;
-    			margin: auto;
-				max-width: 80px;
-			}
-		</style>
 		<ul class="contact_info">
 			<img class="contact_img" hspace="10" src="{{image}}">
 			<ul>
@@ -121,15 +123,8 @@ li {
 				<h2><strong>Email:</strong> {{email}}</h2>
 			</ul>
 		</ul>
-		<style type="text/css">
-			h2, h4 {
-  				font-family: 'Alegreya Sans', sans-serif;
-  				font-weight: 300;
-  				margin-top: 30px;
-				}
-		</style>
 		<button id="back_button" class="click_button" onclick="">
-					<strong>Delete</strong>
+			<strong>Delete</strong>
 		</button>
 	</main>
 	</body>
