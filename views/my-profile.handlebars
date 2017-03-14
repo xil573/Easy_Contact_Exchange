@@ -64,9 +64,14 @@
                 </ul>
             </li>
 			<li>
-				<button id="edit_profile" class="edit_button" onclick="editProfile()">
-					<strong>Add more contact information</strong>
-				</button>
+                <div class = "buttons">
+                    <button id="img_profile" class="img_edit_button" onclick="">
+                        <strong>Change your profile image</strong><input type="file" onchange="previewFile()">
+                    </button>
+				    <button id="edit_profile" class="edit_button" onclick="editProfile()">
+					   <strong>Add more contact information</strong>
+				    </button>
+                </div>
 			</li>
 		</ul>
 	</main>
