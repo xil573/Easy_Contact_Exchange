@@ -15,6 +15,7 @@ var groups = require('./routes/groups');
 var ginfo = require('./routes/groupsinfo');
 var logoff = require('./routes/logOff');
 var login = require('./routes/login');
+var wrong = require('./routes/wrong');
 var contact = require('./routes/contact');
 var add_new_account = require('./routes/addNewAccount');
 var search_contact = require('./routes/addNewAccount');
@@ -56,9 +57,9 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/', login.view);
 app.get('/check-login', login.checkLogin);
+app.get('/wrong', wrong.view);
 
 app.get('/home', index.view);
-
 app.get('/my-profile', my_profile.view);
 app.get('/settings', settings.view);
 app.get('/addSetting', settings.addSetting);
@@ -73,6 +74,8 @@ app.get('/add_new_account', add_new_account.view);
 app.get('/search-contact', search_contact.searchContact);
 
 app.get('/search_result', search_result.view);
+app.get('/addRecp', search_result.storeRecp);
+
 app.get('/search_result_all', search_result_all.view);
 app.get('/select_info', select_info.view);
 app.get('/confirm', confirm.view);

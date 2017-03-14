@@ -29,3 +29,7 @@ function loginResult(result) {
 function gotoCreatePage() {
     window.location.href = "create-account";
 }
+
+function gotologin(){
+    window.location.href = "/";
+}

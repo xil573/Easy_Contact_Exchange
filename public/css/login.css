@@ -148,3 +148,8 @@ input[type=button], input[type=submit], input[type=reset] {
 	-webkit-user-select: none;
 	margin-left: 150px;
 }
+h2, h3, h4, h5 {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-weight: 300;
+  margin-top: 10px;
+}

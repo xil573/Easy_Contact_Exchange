@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <title>User Sign in</title>
+	<link rel="stylesheet" href="/css/login.css" />
+	<script
+  		src="https://code.jquery.com/jquery-3.1.1.min.js"
+  		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  		crossorigin="anonymous"></script>
+    <script src="/js/Login.js"></script>
+</head>
+<body>
+	<nav id="nav_bar">
+		<ul id="nav_bar_content">
+			<li id="nav_bar_middle">
+				<strong>Welcome to EasyContactX</strong>
+			</li>
+			<li id="nav_bar_right">
+			</li>
+		</ul>
+	</nav>
+	<main>
+		<div id="app_pic" class="pic">
+      		<img id="app_image" class='image' alt="Avatar" src="images/entry-icon.png" />
+    	</div>
+    	<br>
+    	<h2 style = "text-align: center;">Your username or password is incorrect, please try again.<h2>
+			<button id="create_new_button" class="create_button" onclick="gotologin()">
+				<strong>Back</strong>
+			</button>
+    </main>
+</body>
+</html>
