@@ -61,6 +61,8 @@ app.get('/home', index.view);
 
 app.get('/my-profile', my_profile.view);
 app.get('/settings', settings.view);
+app.get('/addSetting', settings.addSetting);
+
 app.get('/groups', groups.view);
 app.get('/groupsInfo/:id', ginfo.gInfo);
 app.get('/logoff', logoff.view);

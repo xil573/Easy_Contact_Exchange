@@ -35,8 +35,11 @@
 	<main>
 		<div class="container">
 			<div class="control-group">
-				<h2>Please select the contact information you want to send:</h3>
-		
+				<h3>Your default contact information is set to:
+					{{#each setting}}
+						<strong>{{way}} </strong></h3>
+					{{/each}}
+					<h3>Please select additional contact information you want to send:</h3>
 					<form>
 						<label class="control control--checkbox"><h4>Phone Number</h4>
 	  						<input id = "phone" type="checkbox" name="way" value="phone">

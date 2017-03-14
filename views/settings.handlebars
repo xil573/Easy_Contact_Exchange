@@ -29,36 +29,42 @@
 	<main>
 		<div class="container">
 			<div class="control-group">
+				<h3>Your default contact information is set to:
+					{{#each setting}}
+						<strong>{{way}} </strong></h3>
+					{{/each}}
 				<h2>Please select the DEFAULT information you want to send out:</h2>
 				<!--
 				<ul id="contact_info_list">
 				-->
-					<form>
+					<form id = "defSetting" role = "form" method="get" action="/addSetting">
 						<label class="control control--checkbox"><h4>Phone Number</h4>
-	  						<input id = "phone" type="checkbox" name="way" value="phone">
+	  						<input id = "phone" type="checkbox" name="way" value="Phone">
 	  						<div class="control__indicator"></div>
     					</label>
     					<label class="control control--checkbox"><h4>Email Address</h4>
-  							<input id = "email" type="checkbox" name="way" value="email">
+  							<input id = "email" type="checkbox" name="way" value="Email">
   							<div class="control__indicator"></div>
     					</label>
     					<label class="control control--checkbox"><h4>Facebook</h4>
-	  						<input id = "facebook" type="checkbox" name="way" value="facebook">
+	  						<input id = "facebook" type="checkbox" name="way" value="Facebook">
 	  						<div class="control__indicator"></div>
     					</label>
     					<label class="control control--checkbox"><h4>LinkedIn</h4>
-	  						<input id = "linkedin" type="checkbox" name="way" value="linkedin">
+	  						<input id = "linkedin" type="checkbox" name="way" value="LinkedIn">
 	  						<div class="control__indicator"></div>
     					</label>
     					<label class="control control--checkbox"><h4>WeChat</h4>
-	  						<input id = "wechat" type="checkbox" name="way" value="wechat">
+	  						<input id = "wechat" type="checkbox" name="way" value="WeChat">
 	  						<div class="control__indicator"></div>
     					</label>
     					<label class="control control--checkbox"><h4>Instagram</h4>
-	  						<input id = "instagram" type="checkbox" name="way" value="instagram">
+	  						<input id = "instagram" type="checkbox" name="way" value="Instagram">
 	  						<div class="control__indicator"></div>
     					</label>
   				<!--<button class="click_button" onclick="checkFunc()">OK</button> -->
+  						<br>
+                		<input type="submit" id="submitBtn" class="btn btn-default" value="Update"></input>
 					</form>
 					<!--
 				</ul>

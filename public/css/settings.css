@@ -76,6 +76,17 @@ h2, h3, h4, h5 {
   font-weight: 300;
   margin-top: 10px;
 }
+input[type=button], input[type=submit], input[type=reset] {
+  width: 100%;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid black;
+  line-height: 24px;
+  padding: 0 10px;
+  outline:none;
+  transition: all 0.2s;
+  -webkit-user-select: none;
+}
 .control-group {
 	display: inline-block;
   	vertical-align: top;
