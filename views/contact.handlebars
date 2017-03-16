@@ -76,7 +76,7 @@
 		margin-left: 65px;
 		max-width: 80px;
 	}
-	h2, h4 {
+	h2, h3, h4, h5 {
   		font-family: 'Alegreya Sans', sans-serif;
   		font-weight: 300;
   		margin-top: 30px;
@@ -106,7 +106,7 @@
 			<li id="nav_bar_middle">
 				
 				<strong id="profile_name">
-					Contacts
+					{{name}}
 				</strong>
 			</li>
 			<li id="nav_bar_right">
@@ -118,14 +118,20 @@
 		<ul class="contact_info">
 			<img class="contact_img" hspace="10" src="{{image}}">
 			<ul>
-				<h2><strong>Name:</strong> {{name}}</h2>
-				<h2><strong>Phone:</strong> {{phone}}</h2>
-				<h2><strong>Email:</strong> {{email}}</h2>
+				<h3><font color = "#0059b3"><strong>{{name}} </strong>has shared this information with you:</font></h3>
+				<li><h4><strong>Phone:</strong> {{phone}}</h4></li>
+				<li><h4><strong>Email:</strong> {{email}}</h4></li>
+			</ul>
+			<ul>	
+				<h3><font color = "#0059b3">You have shared this information to <strong>{{name}}</strong>:</font></h3>
+					<li><h4><strong>Phone</strong></h4>
+					<li><h4><strong>Facebook</strong></h4>
 			</ul>
 		</ul>
-		<button id="back_button" class="click_button" onclick="">
-			<strong>Delete</strong>
+		<button id="back_button" class="click_button" onclick="deleteContact()">
+			<strong>Delete this contact</strong>
 		</button>
+		<h5>By deleting this contact, you won't be able to share contact information with <strong>{{name}}</strong>.</h5>
 	</main>
 	</body>
 </html>
