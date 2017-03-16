@@ -25,8 +25,8 @@
 				<strong>Select Information</strong>
 			</li>
 			<li id="nav_bar_right">
-				<button id="next_button" class="click_button" onclick="confirmPage()">
-					<strong>Next</strong>
+				<button id="next_button" class="click_button" onclick="donePage()">
+					<strong>Send</strong>
 				</button>
 			</li>
 		</ul>
@@ -35,18 +35,18 @@
 	<main>
 		<div class="container">
 			<div class="control-group">
-				<h3>Your default contact information is set to:
+				<h3><font color = "#0059b3">Your default contact information is set to:
 					{{#each setting}}
-						<strong>{{way}} </strong></h3>
+						<strong>{{way}} </strong></font></h3>
 					{{/each}}
 					<h3>Please select additional contact information you want to send:</h3>
 					<form>
 						<label class="control control--checkbox"><h4>Phone Number</h4>
-	  						<input id = "phone" type="checkbox" name="way" value="phone">
+	  						<input id = "phone" type="checkbox" name="way" value="phone" checked>
 	  						<div class="control__indicator"></div>
     					</label>
     					<label class="control control--checkbox"><h4>Email Address</h4>
-  							<input id = "email" type="checkbox" name="way" value="email">
+  							<input id = "email" type="checkbox" name="way" value="email" checked>
   							<div class="control__indicator"></div>
     					</label>
     					<label class="control control--checkbox"><h4>Facebook</h4>

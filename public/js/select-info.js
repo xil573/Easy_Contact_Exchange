@@ -16,3 +16,6 @@ function backToAddNewContactPage() {
 function confirmPage() {
     window.location.href = "confirm";
 }
+function donePage(){
+    window.location.href = "done";
+}
