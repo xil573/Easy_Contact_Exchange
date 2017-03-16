@@ -45,7 +45,7 @@ function listRes(result){
 		}
 	//console.log(names);
 	//console.log(urls);
-		var reshtml = '<h4>Please select the people you want to send your contact information to:</h4>'
+		var reshtml = '<h4>Select the people you want to send your contact information to:</h4>'
 		$("#list_search_res").html(reshtml);
 
 		for(var j = 0; j < names.length; j++){
