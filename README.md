@@ -1,5 +1,4 @@
-lab6
-====
+# CSE170 Final Project - EasyContactX
 
-Lab 6: AJAX
-# cse170_project
+Xindi Li
+Troy Young
