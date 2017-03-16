@@ -5,21 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
     <title>Search account</title>
 	<link rel="stylesheet" href="/css/add_new_account.css" />
+	<link rel="stylesheet" href="/css/search_result.css" />
 	<script
   		src="https://code.jquery.com/jquery-3.1.1.min.js"
   		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   		crossorigin="anonymous"></script>
     <script src="/js/AddNewAccount.js"></script>
+    <script src="/js/invite.js"></script>
+    <script src="/js/SearchResultAll.js"></script>
 </head>
 <body>
 	<nav id="nav_bar">
 		<ul id="nav_bar_content">
 			<li id="nav_bar_left">
-				<div class="menu_button" onclick="toggleSidebar()">
-					<div class="bar"></div>
-					<div class="bar"></div>
-					<div class="bar"></div>
-				</div>
 				<button id="back_button" class="click_button" onclick="backToAddContactPage()">
 					<strong>Back</strong>
 				</button>
@@ -28,24 +26,46 @@
 				<strong>Search</strong>
 			</li>
 			<li id="nav_bar_right">
+				<button id="next_button" class="click_button" onclick="selectInfoToSend()">
+					<strong>Next</strong>
+				</button>
 			</li>
 		</ul>
 	</nav>
 	
 	<main>
 		<ul id="search_package">
+			<!--
 			<form id="add_new_contact" role="form" method="get" action="/search-contact">
+			-->
 			<li>
-				<h3>Please enter the username you want to send your information to:</h3>
+				<h3>Please enter the username you want to send your contact information to:</h3>
 				<input id="search_str" type="text" name="search_str" placeholder="Try: Leo, Tom, Jen, hello etc." value="">
 			</li>
 			<li>
-				<button class="search_button" onclick="">
+				<button id="search_button" class = "search_button" onclick="">
 					<strong>Search</strong>
 				</button>
-				<p id="demo"></p>
-				
 			</li>
+			<li>
+				<br>
+				<h3 id="list_search_res"></h3>
+			</li>
+			<li class="search_item">
+                <div class="container">
+					<div class="control-group">						
+						<div class = "plugin"></div>
+							<!--
+									<label class="control control--checkbox">
+										<h5 class = "res_name"><img class="contact_img" hspace="10" src=""></h5>
+	  									<input id = "user" type="checkbox" name="user" value="">
+	  									<div class="control__indicator"></div>
+    								</label>
+    						-->
+    				</div>
+    			</div>
+    		</li>
+    		<div class = "plugin_no_res"></div>
 		</ul>
 	</main>
 	</body>

@@ -19,8 +19,10 @@ var wrong = require('./routes/wrong');
 var contact = require('./routes/contact');
 var add_new_account = require('./routes/addNewAccount');
 var search_contact = require('./routes/addNewAccount');
+
 var search_result = require('./routes/searchResult');
 var search_result_all = require('./routes/searchResultAll');
+
 var select_info = require('./routes/selectInfo');
 var confirm = require('./routes/confirm');
 var done = require('./routes/done');
@@ -71,10 +73,11 @@ app.get('/logoff', logoff.view);
 app.get('/contact/:id', contact.view);
 
 app.get('/add_new_account', add_new_account.view);
-app.get('/search-contact', search_contact.searchContact);
+//app.get('/search-contact', search_contact.searchContact);
 
-app.get('/search_result', search_result.view);
-app.get('/addRecp', search_result.storeRecp);
+app.get('/search_result/:name', search_result.showResult);
+
+//app.get('/addRecp', search_result.storeRecp);
 
 app.get('/search_result_all', search_result_all.view);
 app.get('/select_info', select_info.view);
