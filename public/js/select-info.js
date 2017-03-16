@@ -1,15 +1,4 @@
 function backToAddNewContactPage() {
-    //window.location.href = "add-new-account";
-    //window.location.href = "add-new-account";
-    var url = window.location.href;
-    console.log(url);
-    var index = url.indexOf("ount/");
-    console.log(index);
-    //var idStr = url.substring(index + 5);
-    console.log(idStr);
-    //window.location.href = "/?id=" + idStr;
-    var idStr = index + 5;
-    //window.location.href = "/?id=" + idStr;
     window.location.href = "add_new_account";
 }
 
@@ -18,4 +7,8 @@ function confirmPage() {
 }
 function donePage(){
     window.location.href = "done";
+}
+
+function backToPendingPage(){
+    window.location.href = "pending";
 }

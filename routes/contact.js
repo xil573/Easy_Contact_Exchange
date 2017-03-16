@@ -11,6 +11,8 @@ exports.view = function (req, res) {
             var conPhone = data.person[i].phone;
             var conEmail = data.person[i].email;
             var conImage = data.person[i].imageURL;
+            var conWechat = data.person[i].wechat;
+            var conFB = data.person[i].facebook;
             //var contact = "Name : " + data.person[i].name + "\n" + "Phone : " + data.person[i].phone + "\n" + "Email : " + data.person[i].email;
             //console.log(contact);
    
@@ -23,6 +25,8 @@ exports.view = function (req, res) {
         'name': conName,
         'phone': conPhone,
         'email': conEmail,
-        'image': conImage
+        'image': conImage,
+        'wechat': conWechat,
+        'facebook': conFB
     });
 };

@@ -15,9 +15,6 @@
 	<nav id="nav_bar">
 		<ul id="nav_bar_content">
 			<li id="nav_bar_left">
-				<button id="back_button" class="click_button" onclick="backToHomePage()">
-					<strong>Home</strong>
-				</button>
 			</li>
 			<li id="nav_bar_middle">
 				<strong>Done!</strong>
@@ -41,13 +38,20 @@
       				display: block;
     				margin: auto;
       			}
+      			li {
+      				margin-top: 10px;
+      			}
       		</style>
     	</div>
     	<br>
-		<h3>You request for exchanging contact information has been sent successfully!</h3>
-		<button id = "back_to_search" class = "back_to_search" onclick = "backToSearch()">
-			<strong>Share your contact info to another person</strong>
-		</button>
+    	<ul>
+			<h3>You have successfully added
+				<li><strong>Robert Downey Jr.</strong></li>
+				 to your contacts!</h3>
+			<button id = "back_to_search" class = "back_to_search" onclick = "backToHomePage()">
+				<strong>Go back to my contacts</strong>
+			</button>
+		</ul>
 	</main>
 	<script src="/js/done.js"></script>
 </body>

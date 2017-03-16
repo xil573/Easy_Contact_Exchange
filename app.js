@@ -24,8 +24,15 @@ var search_result = require('./routes/searchResult');
 var search_result_all = require('./routes/searchResultAll');
 
 var select_info = require('./routes/selectInfo');
+var select_info_chris = require('./routes/select_info_chris');
+var select_info_robert = require('./routes/select_info_robert');
+
 var confirm = require('./routes/confirm');
+
 var done = require('./routes/done');
+var done_chris = require('./routes/done_chris');
+var done_robert = require('./routes/done_robert');
+
 var create_new_acc = require('./routes/createNewAcc');
 var edit_profile = require('./routes/editProfile');
 var add = require('./routes/editProfile');
@@ -33,6 +40,7 @@ var newUser = require('./routes/createNewAcc');
 var invite = require('./routes/invite');
 // Example route
 // var user = require('./routes/user');
+var pending = require('./routes/pending');
 
 var app = express();
 
@@ -80,14 +88,30 @@ app.get('/search_result/:name', search_result.showResult);
 //app.get('/addRecp', search_result.storeRecp);
 
 app.get('/search_result_all', search_result_all.view);
+
 app.get('/select_info', select_info.view);
+app.get('/select_info_chris', select_info_chris.view);
+app.get('/select_info_robert', select_info_robert.view);
+//app.get('/select_info_chris_add', select_info_chris.addNewChris);
+//app.get('/select_info_robert_add', select_info_robert.addNewRobert);
+
 app.get('/confirm', confirm.view);
+
 app.get('/done', done.view);
+//app.get('/done_chris', done_chris.view);
+//app.get('/done_robert', done_robert.view);
+app.get('/done_chris_add', done_chris.addNewChris);
+app.get('/done_robert_add', done_robert.addNewRobert);
+
 app.get('/create-account', create_new_acc.view);
 app.get('/edit-profile', edit_profile.view);
 app.get('/add', add.addInfo);
 app.get('/new-user', newUser.createNewUser);
 app.get('/invite', invite.view);
+
+app.get('/pending', pending.view);
+//app.get('/addNew_send_chris', pending.addNewChris);
+//app.get('/addNew_send_robert', pending.addNewRobert);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

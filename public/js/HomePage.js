@@ -42,6 +42,10 @@ function changePageToSettings() {
     window.location.href = "settings";
 }
 
+function changePageToPending() {
+    window.location.href = "pending";
+}
+
 function logOff() {
     window.location.href = "logoff";
 }

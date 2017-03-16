@@ -3,14 +3,14 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-    <title>Contacts</title>
+    <title>Pending Requests</title>
 	<!--<link rel="stylesheet" href="css/contact.css" />	-->
 	<script 
   		src="https://code.jquery.com/jquery-3.1.1.min.js"
   		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   		crossorigin="anonymous"></script>
   	<script src="/js/contact.js"></script>
-
+  	<script src="/js/pending.js"></script>
   	<style type="text/css">
 	ul {
 		padding: 0;
@@ -68,13 +68,15 @@
 			text-align: center;
 	}
 	main {
-		margin-left: 50px;
+		margin-left: 30px;
 		margin-right: 30px;
 		margin-top: 51px;
+		padding: 15px;
 	}
 	.contact_img{
-		margin-top: 10px;
-		margin-left: 90px;
+		display: block;
+    	margin: auto;
+		
 		max-width: 80px;
 	}
 	h2, h3, h4, h5 {
@@ -93,6 +95,12 @@
   		transition: all 0.2s;
   		-webkit-user-select: none;
 	}
+	.divider{
+		color: #a1a6a8;
+     	background: #a1a6a8; 
+     	width: 100%; 
+     	height: 1px;
+	}
 </style>
 </head>
 
@@ -100,39 +108,55 @@
 	<nav id="nav_bar">	
 		<ul id="nav_bar_content">
 			<li id="nav_bar_left">
-				<button id="back_button" class="click_button" onclick="backToIndex()">
+				<button id="back_button" class="click_button" onclick="backToHomePage()">
 					<strong>Back</strong>
 				</button>		
 			</li>
-			<li id="nav_bar_middle">
-				
+			<li id="nav_bar_middle">				
 				<strong id="profile_name">
-					{{name}}
+					Pending Requests
 				</strong>
 			</li>
 			<li id="nav_bar_right">
 			</li>
 		</ul>
 	</nav>
-
 	<main>
 		<ul class="contact_info">
-			<img class="contact_img" hspace="10" src="{{image}}">
 			<ul>
-				<h4><font color = "#0059b3"><strong>{{name}} </strong>has shared this information with you:</font>
-				<li><strong>Phone: </strong>{{phone}}</li>
-				<li><strong>Email: </strong>{{email}}</h4></li>
+				<img class="contact_img" src="http://cdn.conectate.com.do.s3.amazonaws.com/wp-content/uploads/2015/04/Chris-Evans.jpg">
+				<h4><font color = "#0059b3"><strong>Chris Evens </strong>wants to share this information with you:</font>
+				<li><strong>Phone</strong></li>
+				<li><strong>Email</strong></h4></li>
 			</ul>
-			<ul>	
-				<h4><font color = "#0059b3">You have shared this information to <strong>{{name}}</strong>:</font>
-					<li><strong>Phone</strong></li>
-					<li><strong>Facebook</strong></h4></li>
-			</ul>
+			
 		</ul>
-		<button id="back_button" class="click_button" onclick="deleteContact()">
-			<strong>Delete this contact</strong>
-		</button>
-		<h5>By deleting this contact, you won't be able to share contact information with <strong>{{name}}</strong>.</h5>
+		<form action="/select_info_chris" method="get">
+			<button type="submit" id="back_button" class="click_button" onclick="selectInfoToSend()">
+				<strong>Agree and send back contact info</strong>
+			</button>
+		</form>
+		<br>
+		<div class = "divider"></div>  
+		<br>
+		
+		<ul class="contact_info">
+			<ul>
+				<img class="contact_img" src="https://doctorwhowatch.com/files/2016/03/downey.jpg">
+				<h4><font color = "#0059b3"><strong>Robert Downey Jr. </strong>wants to share this information with you:</font>
+				<li><strong>Phone</strong></li>
+				<li><strong>Email</strong></h4></li>
+			</ul>
+			
+		</ul>
+		<form action="/select_info_robert" method="get">
+			<button type="submit" id="back_button" class="click_button" onclick="selectInfoToSend()">
+				<strong>Agree and send back contact info</strong>
+			</button>
+		</form>
+		<br>
+		<div class = "divider"></div> 
+		<h5>You will be able to view the detailed information once you send back your own contact information.</h5>
 	</main>
 	</body>
 </html>
